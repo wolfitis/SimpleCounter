@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="author" content="Faras">
+
+  <title>Counter App</title>
+  <link href="resources/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="resources/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body class="my-container">
+  <div class="nav-bar">
+    <h2>Counter App</h2>
+  </div>
+      <div id="mycounter">
+        <div style="text-align: center; margin-top:10%; padding:5%">
+          <h3>{{ number }}</h3>
+          <hr class="main-hr" />
+          <button class="icon-btn add-btn" v-on:click="number -= 1">
+            <div class="btn-txt">Decrement</div>
+          </button>
+          <button class="icon-btn add-btn" v-on:click="number +=1">
+            <div class="add-icon"></div>
+            <div class="btn-txt">Increment</div>
+          </button>
+        </div>
+      </div>
+</body>
+
+</html>
+
+<script>
+  new Vue({
+  el: '#mycounter',
+  data: {
+    number: 0
+  }
+})
+
+</script>
